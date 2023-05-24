@@ -27,3 +27,6 @@ Users data to login:
 - Transfer amount must be greater than 0 and not less than users's total balance.
 - Also a user can't transfer money to himself.
 - In order to close the account a user should enter his login and pin in the close form.
+
+> **Warning**  
+> Unfortunately the error popup messages has not been added yet. The Highlights block introduced above should help.
