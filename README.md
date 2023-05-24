@@ -1,25 +1,34 @@
 # Bank App
 
-This is a training project to improve my skills in app development with OOP approach.
+> **Note**  
+> This is a training project to improve my skills in app development with OOP approach.
 
-The idea is that the user can watch his balance and manage it. There are users data given `src/store/DUMMY_USERS.ts` the app takes to render UI.
+---
 
-#### The following stack is used:
+The idea is that the user can watch his balance and manage it.  
+The app takes the dummy data from `src/store/DUMMY_USERS.ts` to render UI.
+
+You can try https://bank-app-prv.netlify.app
+
+> **Note**  
+> The app is not adapted for the mobile version
+
+### The following stack is used:
 
 - PUG
 - SCSS
 - TypeScript
 - Webpack 5
 
-You can try https://bank-app-prv.netlify.app
-
-Users data to login:
+## Users data to login:
 
 | login | pin  |
 | ----- | ---- |
 | 'ef'  | 1111 |
 | 'as'  | 2222 |
 | 'ai'  | 3333 |
+
+---
 
 #### 💡 Highlights
 
@@ -29,4 +38,4 @@ Users data to login:
 - In order to close the account a user should enter his login and pin in the close form.
 
 > **Warning**  
-> Unfortunately the error popup messages has not been added yet. The Highlights block introduced above should help.
+> The error popup messages has not been added yet. The Highlights block introduced above should help.
