@@ -1,0 +1,49 @@
+// Fonts
+$font-family: 'Poppins', sans-serif;
+
+$font-size-html: 10px;
+$font-size-main: 1.6rem;
+$font-size-login-btn: 3rem;
+$font-size-balance-title: 3rem;
+$font-size-balance-date: 1.4rem;
+$font-size-balance-number: 5rem;
+$font-size-operation-title: 2rem;
+$font-size-operation-form-btn: 2rem;
+$font-size-operation-form-label: 1.3rem;
+$font-size-transfers-date: 1.2rem;
+$font-size-transfers-filter: 1.4rem;
+$font-size-sum-item: 2.3rem;
+
+$font-color-main: #2c2c2c;
+$font-color-balance-date: #888;
+
+$font-weight: (
+  'bold': 700,
+  'regular': 500,
+);
+
+@function weight($weight) {
+  @return map-get($font-weight, $weight);
+}
+
+// UI
+@function mainColor($opacity) {
+  @return rgba(187, 151, 0, $opacity);
+}
+
+@function white($opacity) {
+  @return rgba(255, 255, 255, $opacity);
+}
+
+@function black($opacity) {
+  @return rgba(0, 0, 0, $opacity);
+}
+
+$background-color-page: rgba(187, 151, 0, 0.1);
+$background-color-operation-item-2: rgba(187, 22, 0, 0.5);
+$color-deposit: rgb(0, 128, 0, 0.5);
+$color-withdrawal: rgb(150, 0, 0, 0.5);
+
+$border-radius-first: 1rem;
+$border-radius-second: 2rem;
+$border-radius-third: 0.5rem;

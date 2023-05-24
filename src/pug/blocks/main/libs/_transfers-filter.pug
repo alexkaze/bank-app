@@ -1,0 +1,7 @@
+- var options = ['all-movements', 'deposits', 'withdrawals']
+
+mixin transfers-filter()
+    select.transfers-filter
+        each option, key in options
+                - var selected = key === 0 ? true : false;
+                option(value=option selected = selected) !{option}

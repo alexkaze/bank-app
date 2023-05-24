@@ -1,0 +1,24 @@
+include ./_operationsData
+
+mixin operations()
+    .operations
+        each operation in operationsData
+            .operations__item
+                .operations__title #{operation.title}
+
+                .operations__form.operation-form
+                    each input, index in operation.inputs
+                        +formInput(
+                            id=input.id
+                            class=['operation-form__item', 'operation-form__input']
+                            type=input.type
+                            maxlength = (index === 1) ? '4' : null
+                        )
+
+                    +formBtn('&rarr;')(
+                        id=operation.idBtn
+                        class=['operation-form__item', 'operation-form__btn']
+                    )
+
+                    each label in operation.labels
+                        label.operation-form__label(for=label.for ) !{label.text}

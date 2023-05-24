@@ -1,0 +1,180 @@
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template: 10rem 47rem 5rem / 1fr;
+  gap: 2rem;
+}
+
+.fadein {
+  animation: fadeIn 1s ease-in-out 0s 1 normal both;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+}
+
+.main-header {
+  @extend %flex-center-between;
+
+  &__title {
+    font-size: $font-size-balance-title;
+  }
+
+  &__date {
+    font-size: $font-size-balance-date;
+    color: $font-color-balance-date;
+  }
+
+  &__number {
+    font-size: $font-size-balance-number;
+  }
+}
+
+.main-content {
+  display: grid;
+  grid-template: auto 1fr / 0.7fr 1fr;
+  gap: 3rem 10rem;
+}
+
+.transfers-filter {
+  grid-column: 2;
+  justify-self: end;
+  padding: 1rem;
+  font-size: $font-size-transfers-filter;
+  text-transform: uppercase;
+
+  background-color: mainColor(0.4);
+  border: none;
+  border-radius: $border-radius-third;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.operations {
+  display: grid;
+  gap: 3rem;
+
+  &__item {
+    display: grid;
+    align-items: center;
+    padding: 2rem;
+    border-radius: $border-radius-first;
+
+    &:first-child {
+      background-color: mainColor(0.5);
+    }
+
+    &:last-child {
+      background-color: $background-color-operation-item-2;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-operation-title;
+    font-weight: weight(bold);
+  }
+
+  &__form {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr) 0.4fr;
+    gap: 0.6rem 1.5rem;
+  }
+}
+
+.operation-form {
+  &__item {
+    width: 100%;
+    border-radius: $border-radius-third;
+  }
+  &__input {
+    padding: 0.6rem 1rem;
+    text-align: center;
+    background-color: white(0.5);
+
+    &:focus {
+      background-color: white(0.7);
+    }
+  }
+  &__btn {
+    font-size: $font-size-operation-form-btn;
+    background-color: white(1);
+
+    &:hover {
+      background-color: white(0.8);
+    }
+  }
+
+  &__label {
+    font-size: $font-size-operation-form-label;
+    text-align: center;
+  }
+}
+
+.transfers {
+  background-color: white(1);
+  border-radius: $border-radius-first;
+  overflow-y: scroll;
+  box-shadow: 0 1rem 4rem rgb(0 0 0 / 25%);
+
+  &__row {
+    display: grid;
+    grid: 1fr / repeat(3, 1fr);
+    align-items: center;
+    padding: 2rem;
+
+    border-bottom: 0.1rem black(0.3) solid;
+    transition: all 0.1s linear;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--deposit {
+      color: white(1);
+      background-color: $color-deposit;
+    }
+
+    &--withdrawal {
+      color: black(1);
+      background-color: $color-withdrawal;
+    }
+  }
+
+  &__date {
+    font-size: $font-size-transfers-date;
+    opacity: 0.7;
+  }
+
+  &__amount {
+    text-align: right;
+  }
+}
+
+.main-footer {
+  @extend %flex-center-between;
+
+  &__sum {
+    display: flex;
+    gap: 10rem;
+  }
+
+  &__sum-item {
+    font-size: $font-size-sum-item;
+
+    &--in {
+      color: $color-deposit;
+    }
+
+    &--out {
+      color: $color-withdrawal;
+    }
+  }
+}

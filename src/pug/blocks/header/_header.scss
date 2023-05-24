@@ -1,0 +1,58 @@
+.header {
+  grid-area: header;
+  padding: 0 2rem;
+
+  &__content {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 160rem;
+    height: 100%;
+  }
+}
+
+.logo-link {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+}
+
+.img-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.login-form {
+  display: flex;
+  gap: 2rem;
+
+  &__input {
+    padding: 1rem;
+    max-width: 15rem;
+    text-align: center;
+
+    border: 0.2rem mainColor(0.6) solid;
+    border-radius: $border-radius-second;
+    background-color: white(1);
+
+    &:focus {
+      border: 0.2rem mainColor(1) solid;
+    }
+
+    &::placeholder {
+      color: mainColor(0.6);
+    }
+  }
+
+  &__btn {
+    font-size: $font-size-login-btn;
+
+    &:hover {
+      color: mainColor(1);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+- 
+    var operationsData = [
+        {
+            title: 'Transfer money',
+            inputs: [ 
+                { 
+                    id: 'transfer-to',
+                    type: 'text',
+                },
+                { 
+                    id: 'transfer-amount',
+                    type: 'number',
+                } 
+            ],
+            idBtn: 'btn-transfer-to',
+            labels: [ 
+                { 
+                    for: 'transfer-to',
+                    text: 'Transfer to', 
+                },
+                { 
+                    for: 'transfer-amount',
+                    text: 'Amount',
+                } 
+            ],
+        },
+        {
+            title: 'Close account',
+            inputs: [ 
+                { 
+                    id: 'close-username',
+                    type: 'text',
+                },
+                { 
+                    id: 'close-pin',
+                    type: 'password',
+                } 
+            ],
+            idBtn: 'btn-close-acc',
+            labels: [ 
+                { 
+                    for: 'close-username',
+                    text: 'Confirm user', 
+                },
+                { 
+                    for: 'close-pin',
+                    text: 'Confirm PIN',
+                } 
+            ],
+        },        
+    ]

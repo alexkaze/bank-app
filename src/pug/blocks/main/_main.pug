@@ -1,0 +1,23 @@
+include ./libs/_transfers-filter
+include ./libs/operations/_operations
+
+mixin main
+    template#main-template
+        .main-header
+            div
+                h2.main-header__title Current balance
+                time.main-header__date
+            #balance.main-header__number
+
+        .main-content
+            +transfers-filter
+            +operations
+            .transfers
+
+        .main-footer
+            .main-footer__timer
+            .main-footer__sum
+                div In #[span#sum-in.main-footer__sum-item.main-footer__sum-item--in]
+                div Out #[span#sum-out.main-footer__sum-item.main-footer__sum-item--out]
+
+    main.main

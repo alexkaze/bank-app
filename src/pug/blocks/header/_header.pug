@@ -1,0 +1,33 @@
+mixin header
+    template#header-template
+        +formInput()(
+            id='login-username'
+            class='login-form__input'
+            placeholder='login'
+        )
+        +formInput()(
+            id='login-pin'
+            class='login-form__input'
+            placeholder='PIN'
+            type='password'
+            maxlength='4'
+        )
+        +formBtn('&rarr;')(
+            id='btn-login'
+            class='login-form__btn'
+            type='submit'
+        )
+        +formBtn('Logout')(
+            id='btn-logout'
+            class='login-form__btn'
+            type='button'
+        )
+
+    header.header
+        .header__content
+            h1.header__title Login to get started
+
+            a.logo-link(href="/") 
+                img.img-logo(src=require('Images/logo.png'))
+
+            form.login-form(action="/" method="post")
