@@ -5,7 +5,7 @@ class AppState {
   private _curAccount: AccountData | undefined;
   private static instance: AppState;
 
-  constructor() {
+  private constructor() {
     this.accounts = DUMMY_USERS;
   }
 
