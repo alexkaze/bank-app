@@ -40,7 +40,7 @@ https://bank-app-prv.netlify.app
 
 ## Installation and launch
 
-Clone the reprepository:
+Clone the repository:
 
 ```
 git clone https://github.com/alexkaze/bank-app.git
